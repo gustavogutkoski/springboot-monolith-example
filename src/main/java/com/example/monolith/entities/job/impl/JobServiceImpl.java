@@ -5,8 +5,6 @@ import com.example.monolith.entities.job.JobRepository;
 import com.example.monolith.entities.job.JobService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
