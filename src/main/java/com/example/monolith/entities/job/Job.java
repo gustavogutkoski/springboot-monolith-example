@@ -1,10 +1,12 @@
 package com.example.monolith.entities.job;
 
+import com.example.monolith.entities.company.Company;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -26,6 +28,9 @@ public class Job {
     private String maxSalary;
 
     private String location;
+
+    @ManyToOne
+    private Company company;
 
     public Job(String title, String description, String minSalary, String maxSalary, String location) {
         this.title = title;
@@ -80,5 +85,13 @@ public class Job {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 }
