@@ -1,49 +1,47 @@
-# Exemplo de API monolítica com Java, Spring Boot e PostgreSQL
+# Example of a Monolithic API with Java, Spring Boot, and PostgreSQL
 
-Este projeto é um exemplo de uma arquitetura monolítica desenvolvida com Java 17, utilizando Spring Boot 3 e PostgreSQL 16.
+This project is an example of a monolithic architecture developed with Java 17, using Spring Boot 3 and PostgreSQL 16.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - **Java 17**
 - **Spring Boot 3**
 - **PostgreSQL 16**
 
-## Arquitetura
+## Architecture
 
-Este projeto foi desenvolvido seguindo a arquitetura monolítica, que é uma das abordagens tradicionais para o desenvolvimento de aplicações. 
+This project was developed following a monolithic architecture, which is one of the traditional approaches for application development.
 
-Nessa arquitetura, todos os componentes de software, como módulos de autenticação, banco de dados, lógica de negócios, e interfaces de usuário, são integrados e executados como uma única aplicação.
+In this architecture, all software components, such as authentication modules, database, business logic, and user interfaces, are integrated and run as a single application.
 
-## Entidades
+## Entities
 
-A API possui três principais entidades:
+The API has three main entities:
 
-- **Company**: Representa uma empresa no sistema, contendo informações como nome, descrição, quais empregos são dessa empresa e quais as notas da avaliação.
-- **Job**: Representa uma vaga de emprego oferecida por uma empresa, contendo detalhes como título, descrição, valor minimo e máximo do salário, localização e empresa.
-- **Review**: Representa uma avaliação de uma empresa por parte de um funcionário ou candidato, contendo informações como título, descrição, nota e a qual empresa está vinculado essa avaliação.
+- **Company**: Represents a company in the system, containing information such as name, description, the jobs offered by the company, and the reviews related to it.
+- **Job**: Represents a job position offered by a company, containing details such as title, description, minimum and maximum salary, location, and associated company.
+- **Review**: Represents a review of a company by an employee or candidate, containing information such as title, description, rating, and the company to which the review is linked.
 
 ## Endpoints
 
-A API disponibiliza os seguintes endpoints para interação com as entidades:
+The API provides the following endpoints for interacting with the entities:
 
-- `/companies` - Endpoints para criar, listar, atualizar e deletar empresas.
-- `/jobs` - Endpoints para criar, listar, atualizar e deletar vagas de emprego.
-- `/reviews` - Endpoints para criar, listar, atualizar e deletar avaliações.
+- `/companies` - Endpoints to create, list, update, and delete companies.
+- `/jobs` - Endpoints to create, list, update, and delete job positions.
+- `/reviews` - Endpoints to create, list, update, and delete reviews.
 
-Possui implementado os métodos HTTP `GET`, `POST`, `DELETE` e `PUT` para cada endpoint
+Implemented HTTP methods include GET, POST, DELETE, and PUT for each endpoint.
 
-Para cada método HTTP possui implementado um endpoint que pode ser utilizado por id
-- Exemplo:
-    - `/companies/1`
-    - `/jobs/2`
-    - `/reviews/3`
+Each HTTP method has an implemented endpoint that can be used by ID.
 
-Esse projeto está sendo utilizado como exemplo para estudo de refatoração de arquitetura monolitica para arquitetura de micro serviços, dividindo cada entidade para um serviço.
+Example:
 
-## Observações
+- `/companies/1`
+- `/jobs/2`
+- `/reviews/3`
 
-Esse projeto está sendo utilizado como exemplo para estudo de refatoração de arquitetura monolitica para arquitetura de micro serviços, dividindo cada entidade para um serviço.
+## Notes
 
-Segue abaixo os repositórios de cada serviço:
+This project is being used as an example to study the refactoring of monolithic architecture to microservices architecture, dividing each entity into a separate service.
 
-
+Below are the repositories for each service:
